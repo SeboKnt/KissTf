@@ -24,10 +24,7 @@ jobs:
     - name: Terraform Validate
       run: terraform validate
 
-    - name: Terraform Plan
-      run: terraform plan -out=tfplan
-
     - name: Terraform Apply
-      run: terraform apply -auto-approve tfplan
+      run: terraform apply -auto-approve
       env:
         TF_VAR_hcloud_token: ${{ secrets.hcloud_token }}
