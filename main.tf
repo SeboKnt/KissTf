@@ -7,6 +7,5 @@ resource "hcloud_server" "server" {
     image       = "ubuntu-22.04"
     server_type = "cax21"
     location    = "nbg1"
-    ssh_keys    = [user]
     user_data = file("./cloud-init")
 }
